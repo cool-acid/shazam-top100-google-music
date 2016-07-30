@@ -2,6 +2,7 @@ const rp = require('request-promise-native')
 const PlayMusic = require('playmusic')
 const pm = new PlayMusic()
 const config = require('./config')
+const moment = require('moment')
 
 // Initializing PlayMusic
 pm.init(config.google, err => {
@@ -18,13 +19,15 @@ pm.init(config.google, err => {
   .then( json => {
     console.log(json.chart.length)
     if (json.chart.length) {
-      json.chart.forEach( track => {
+      const title = 'Shazam Top 100 (' + moment().format('MMM D, YY HH:mm') + ')'
+      const songsIDs = json.chart.map( track => {
         if ('google' in track.stores) {
-          console.log(track.stores.google.trackid)
+          return track.stores.google.trackid
         } else {
           console.log('No Google Music track ID: ' + track.share.subject)
+          return null
         }
-      })
+      }).filter( element => element !== null )
     } else {
       console.log('No tracks returned.')
     }
