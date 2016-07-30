@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/cool-acid/shazam-top100-google-music/issues"
   },
-  "homepage": "https://github.com/cool-acid/shazam-top100-google-music#readme"
+  "homepage": "https://github.com/cool-acid/shazam-top100-google-music#readme",
+  "dependencies": {
+    "request": "^2.74.0",
+    "request-promise-native": "^1.0.2"
+  }
 }
