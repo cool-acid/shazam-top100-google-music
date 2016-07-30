@@ -4,7 +4,7 @@
   "description": "Script to create Google Music playlists from Shazam Top 100 charts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/cool-acid/shazam-top100-google-music/issues"
   },
-  "homepage": "https://github.com/cool-acid/shazam-top100-google-music#readme"
+  "homepage": "https://github.com/cool-acid/shazam-top100-google-music#readme",
+  "dependencies": {
+    "moment": "^2.14.1",
+    "playmusic": "git+https://github.com/cool-acid/playmusic.git",
+    "request": "^2.74.0",
+    "request-promise-native": "^1.0.2"
+  }
 }

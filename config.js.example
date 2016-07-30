@@ -1,0 +1,8 @@
+const config = {
+  google: {
+    email: 'youremail@gmail.com',
+    password: 'aVerySecureP4ssword###',
+  }
+}
+
+module.exports = config
