@@ -4,7 +4,7 @@
   "description": "Script to create Google Music playlists from Shazam Top 100 charts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
