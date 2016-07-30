@@ -28,6 +28,17 @@ pm.init(config.google, err => {
           return null
         }
       }).filter( element => element !== null )
+      pm.addPlayList(title, (err, status) => {
+        if (err) {
+          console.log(err)
+        }
+        const playlistID = status.mutate_response[0].id
+        if (playlistID) {
+          pm.addTrackToPlayList(songsIDs, playlistID, (err, status2) => {
+            console.log(status2)
+          })
+        }
+      })
     } else {
       console.log('No tracks returned.')
     }
