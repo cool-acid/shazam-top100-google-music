@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/cool-acid/shazam-top100-google-music#readme",
   "dependencies": {
+    "moment": "^2.14.1",
     "playmusic": "^2.1.1",
     "request": "^2.74.0",
     "request-promise-native": "^1.0.2"
